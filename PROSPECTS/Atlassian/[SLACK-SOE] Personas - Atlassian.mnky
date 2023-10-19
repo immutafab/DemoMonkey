@@ -1,0 +1,33 @@
+@include[] = /^https?://app.slack.com/.*$/
+
+
++TEMPLATES/[SLACK-SOE] Personas
+
+#-------------------------------------------------------------------------------
+# OVERRIDDEN VARIABLES
+# - For overriding the variables from the template
+# - Modify in the tab above called 'Variables'
+# - These will override variables set in the imported template
+#-------------------------------------------------------------------------------
+
+#TEMPLATES/[SLACK-SOE] Personas
+    $juniorEngineerImage = <base64 image of Junior Engineer2>
+    $smeImage = <base64 image of SME>
+    $slackLoggedInUser = <name of logged in demo user in Slack>
+    $prospectCompanyName = <name of prospect company>
+    $juniorEngineerName = <name of Junior Engineer>
+    $smeName = <name of SME>
+    $demoInstanceName = <default name of the Slack demo instance e.g. SOE Demo>
+    $projectName = <name of project>
+
+#-------------------------------------------------------------------------------
+# VARIABLES
+# - Modify in the tab above called 'Variables'
+# - These will override variables set in the imported template
+#-------------------------------------------------------------------------------
+
+
+#-------------------------------------------------------------------------------
+# TEXT REPLACEMENT
+#-------------------------------------------------------------------------------
+   !replace($slackLoggedInUser) = $juniorEngineerName

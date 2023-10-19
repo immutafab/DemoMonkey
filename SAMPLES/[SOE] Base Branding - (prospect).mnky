@@ -1,0 +1,43 @@
+################################################################################
+# WARNING - DO NOT MODIFY THIS FILE
+# WARNING - DO NOT ACTIVATE THIS FILE
+################################################################################
+
+#-------------------------------------------------------------------------------
+# SAMPLE
+#  - Base SOE branding, including colors & logo
+#  - Duplicate this file
+#  - Replace <prospect> with the name of your prospect/customer
+#-------------------------------------------------------------------------------
+
+
+@include[] = /^https?://soedemo.stackenterprise.co/.*$/
+
+
+
++TEMPLATES/[SOE] Base Branding
+
+#-------------------------------------------------------------------------------
+# OVERRIDDEN VARIABLES
+# - For overriding the variables from the template
+# - Modify in the tab above called 'Variables'
+# - These will override variables set in the imported template
+#-------------------------------------------------------------------------------
+
+#[TEMPLATE]/[SOE] - Branding
+    $searchBarColor = <the background color of the SOE search bar>
+    $searchBarBorderColor = <the border color of the SOE search bar>
+    $searchBarTextColor = <the text color of the SOE search bar>
+    $searchBarIconColor = <the color of the magnifing glass icon in SOE Search bar>
+    $topNavBarColor = <the top navigation bar in SOE> //must be a dark color
+    $solidButtonColor = <primary button color>
+    $solidButtonColor2 = <secondary button color>
+    $mainLogoImage = <main top-left logo in Base64 format, all white works best>
+    $projectName = <the customer/prospects project name>
+
+
+#-------------------------------------------------------------------------------
+# VARIABLES
+# - Modify in the tab above called 'Variables'
+# - These will override variables set in the imported template
+#-------------------------------------------------------------------------------

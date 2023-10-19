@@ -1,0 +1,9 @@
+#Step 1: Duplicate a config from /SAMPLES
+#   - rename it it /PROSPECTS/<prospect name>/...
+#   - e.g. /PROSPECTS/Atlassian/[SOE] Base Branding - Atlassian
+
+#Step 2: Set the variables on the config
+#   - Preset images can be found at /IMAGES
+
+#Step 3: Activate the config
+    

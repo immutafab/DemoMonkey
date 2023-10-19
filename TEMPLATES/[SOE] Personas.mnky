@@ -1,0 +1,48 @@
+################################################################################
+# WARNING - DO NOT MODIFY THIS FILE
+# WARNING - DO NOT ACTIVATE THIS FILE
+################################################################################
+
+
+#-------------------------------------------------------------------------------
+# TEMPLATE
+#  - Personas for SOE, including images & names
+#  - to include use: +TEMPLATES/... in your customer specific config
+#  - override variables in prospect specific config
+#-------------------------------------------------------------------------------
+@template
+
+
+#-------------------------------------------------------------------------------
+# VARIABLES
+# - Modify in the tab above called 'Variables'
+#-------------------------------------------------------------------------------
+
+#PERSONA IMAGES
+    $juniorEngineerImage = <base64 image of Junior Engineer2>
+    $smeImage = <base64 image of SME>
+    
+#PERSONA TEXT
+    $slackLoggedInUser = <name of logged in demo user in Slack>
+    $prospectCompanyName = <name of prospect company>
+    $juniorEngineerName = <name of Junior Engineer>
+    $smeName = <name of SME>
+
+    
+    
+#-------------------------------------------------------------------------------
+# SET PERSONA IMAGES
+# - Logic to set images & logo
+#-------------------------------------------------------------------------------
+
+#Logged in user - profile image - top-right
+    !querySelector(.bar-sm.s-avatar--image.js-avatar-me, src) = ${juniorEngineerImage}
+
+#IN-CHAT USER 
+    !querySelector(.s-avatar--image, src) = ${smeImage}
+    
+    
+#-------------------------------------------------------------------------------
+# TEXT REPLACEMENT
+#-------------------------------------------------------------------------------
+

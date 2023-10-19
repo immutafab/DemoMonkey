@@ -1,0 +1,67 @@
+################################################################################
+# WARNING - DO NOT MODIFY THIS FILE
+# WARNING - DO NOT ACTIVATE THIS FILE
+################################################################################
+
+
+#-------------------------------------------------------------------------------
+# TEMPLATE
+#  - Personas for Slack & SOE branding, including images & names
+#  - to include use: +TEMPLATES/... in your customer specific config
+#  - override variables in prospect specific config
+#-------------------------------------------------------------------------------
+@template
+
+
+
+#-------------------------------------------------------------------------------
+# VARIABLES
+# - Modify in the tab above called 'Variables'
+#-------------------------------------------------------------------------------
+
+#PERSONA IMAGES
+    $juniorEngineerImage = <base64 image of Junior Engineer2>
+    $smeImage = <base64 image of SME>
+    
+#PERSONA TEXT
+    $slackLoggedInUser = <name of logged in demo user in Slack>
+    $prospectCompanyName = <name of prospect company>
+    $juniorEngineerName = <name of Junior Engineer>
+    $smeName = <name of SME>
+
+#DEMO INSTANCE
+    $demoInstanceName = <default name of the Slack demo instance e.g. SOE Demo>
+    $projectName = <name of project>
+
+#-------------------------------------------------------------------------------
+# SET PERSON IMAGES
+# - Logic to set images
+#-------------------------------------------------------------------------------
+   
+#LOGGED-IN USER (top-right image)
+    //TODO: currently all user images are the same CSS
+
+
+#IN-CHAT USER 
+    !querySelector(.c-base_icon.c-base_icon--image , src) = ${juniorEngineerImage}
+    !querySelector(.c-base_icon.c-base_icon--image , srcset) = ${juniorEngineerImage}
+    
+
+#UPGRADE BOX
+    #!querySelector(.c-alert.c-alert--boxed) = ""
+    
+    
+#-------------------------------------------------------------------------------
+# TEXT REPLACEMENT
+#-------------------------------------------------------------------------------
+
+#COMPANY NAME
+    !replace($demoInstanceName) = $prospectCompanyName
+   
+#PROJECT NAME
+    //the names on the left are the default content titles in SOE Demo sample content
+    ML/AI = $projectName
+    AI/ML = $projectName
+    Machine learning = $projectName
+    machine learning = $projectName
+    Machine Learning = $projectName

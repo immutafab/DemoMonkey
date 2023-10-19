@@ -1,0 +1,73 @@
+
+################################################################################
+# WARNING - DO NOT MODIFY THIS FILE
+# WARNING - DO NOT ACTIVATE THIS FILE
+################################################################################
+
+
+#-------------------------------------------------------------------------------
+# TEMPLATE
+#  - Base SOE branding, including colors & logo
+#  - to include use: +[SOE][Template]... in your customer specific config
+#  - override variables in customer specific config
+#-------------------------------------------------------------------------------
+@template
+
+#-------------------------------------------------------------------------------
+# VARIABLES
+# - Modify in the tab above called 'Variables'
+#-------------------------------------------------------------------------------
+
+#SEARCH BAR
+    $searchBarColor = <the background color of the SOE search bar>
+    $searchBarBorderColor = <the border color of the SOE search bar>
+    $searchBarTextColor = <the text color of the SOE search bar>
+    $searchBarIconColor = <the color of the magnifing glass icon in SOE Search bar>
+
+#TOP NAV BAR
+    $topNavBarColor = <the top navigation bar in SOE> //*must be a dark color
+
+#BUTTONS
+    $solidButtonColor = <primary button color>
+    $solidButtonColor2 = <secondary button color>
+
+#LOGO
+    $mainLogoImage = <main top-left logo in Base64 format, all white works best>
+
+#PROJECT NAME
+    $projectName = <the customer/prospects project name>
+
+
+#-------------------------------------------------------------------------------
+# SET BRANDING
+# - Logic to set colors & logo
+#-------------------------------------------------------------------------------
+
+#SEARCH BAR
+    !querySelector(.s-input.s-input__search, style.background-color) = $searchBarColor
+    !querySelector(.s-input.s-input__search, style.border-color) = $searchBarBorderColor
+    !querySelector(.s-input.s-input__search, style.color) = $searchBarTextColor
+    !querySelector(.svg-icon, style.color) = $searchBarIconColor
+
+#TOP NAV BAR
+    !querySelector(.s-topbar, style.background-color) = $topNavBarColor
+
+#BUTTON
+    !querySelector(.s-btn__primary, style.background-color) = $solidButtonColor 
+    !querySelector(.s-btn__filled, style.background-color) = $solidButtonColor2 
+
+#LOGO
+    !querySelector(.h-auto.wmx100.light-logo, src) = $mainLogoImage
+
+
+#-------------------------------------------------------------------------------
+# TEXT REPLACEMENT
+#-------------------------------------------------------------------------------
+    
+# PROJECT NAME
+    //the names on the left are the default content titles in SOE Demo sample content
+    ML/AI = $projectName
+    AI/ML = $projectName
+    Machine learning = $projectName
+    machine learning = $projectName
+    Machine Learning = $projectName
